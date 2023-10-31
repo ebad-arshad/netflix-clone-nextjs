@@ -2,26 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  overflow-x: hidden;
+  background: #000 !important;
+}
+
+.transitions {
+  @apply transition duration-300
+}
+
+.mantine-Accordion-item {
+  background: #2d2d2d !important;
+  color: white !important;
+}
+
+.mantine-Accordion-label,
+.mantine-Accordion-chevron {
+  color: white !important;
+  font-size: 26px !important;
+}
+
+.mantine-Accordion-content {
+  font-size: 18px !important;
+  border-top: 1px solid black;
+}
+
+@media screen and (max-width:1024px) {
+
+  .mantine-Accordion-label {
+    font-size: 20px !important;
+  }
 }

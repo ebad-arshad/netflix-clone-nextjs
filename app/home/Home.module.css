@@ -1,0 +1,12 @@
+.bgImage {
+    background-image: url('../../assets/images/home_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 65vh;
+    scale: 1.5;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
