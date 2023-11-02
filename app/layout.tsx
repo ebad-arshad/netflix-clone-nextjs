@@ -1,12 +1,12 @@
 import './globals.css'
 import { getServerSession } from 'next-auth'
 import SessionProvider from '@/components/SessionProvider'
-import { Poppins } from 'next/font/google'
+import { Ubuntu } from 'next/font/google'
 import { MantineProvider, ColorSchemeScript } from '@mantine/core'
 import '@mantine/core/styles.css';
+import 'react-toastify/dist/ReactToastify.css';
 
-const poppins = Poppins({ subsets: ['latin'], weight: "400" })
-
+const ubuntu = Ubuntu({ subsets: ['latin'], weight: "400", display: 'swap', adjustFontFallback: false })
 
 export default async function RootLayout({
   children,
@@ -19,10 +19,10 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <head><ColorSchemeScript /></head>
-      <body className={poppins.className}>
-        {/* <SessionProvider session={session}> */}
-        <MantineProvider>{children}</MantineProvider>
-        {/* </SessionProvider> */}
+      <body className={ubuntu.className}>
+        <SessionProvider session={session}>
+          <MantineProvider>{children}</MantineProvider>
+        </SessionProvider>
       </body>
     </html>
   )

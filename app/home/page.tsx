@@ -1,4 +1,4 @@
-import Nav from "@/components/Home/Nav"
+import Nav from "@/components/Nav"
 import Hero from "@/components/Home/Hero"
 import styles from './Home.module.css'
 import Section from "@/components/Home/Section"
@@ -8,12 +8,13 @@ import sec_2 from '@/assets/images/sec_2.jpg'
 import sec_4 from '@/assets/images/sec_4.png'
 import FAQ from "@/components/Home/FAQ"
 import Footer from "@/components/Footer"
+import Layout from "@/components/Layout"
 
 const Home = () => {
     return (
-        <div className="relative xl:container mx-auto px-10">
+        <Layout>
 
-            <div className="h-[calc(81vh+2px)] relative">
+            <div className="h-[calc(81vh+2px)]">
                 <div className={styles.bgImage} />
                 <Nav />
                 <Hero />
@@ -42,7 +43,7 @@ const Home = () => {
 
             <Footer />
 
-        </div>
+        </Layout>
     )
 }
 
